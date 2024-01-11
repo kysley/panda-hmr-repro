@@ -1,0 +1,27 @@
+/*
+Temporary solution;
+Global styling for changing the background color of the preview window with theme
+ */
+
+@layer reset, base, tokens, recipes, utilities;
+
+html,
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100vh;
+}
+
+#storybook-root {
+    height: 100%;
+}
+
+.story-container_dark,
+.story-container_light {
+    padding: 1rem;
+    height: 100%;
+}
+
+.story-container_dark {
+    background-color: #333333;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@acme/core",
+  "version": "0.13.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "imports": {
+    "#acme/system/*": "./styled-system/*"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts && panda cssgen --outfile dist/styles.css",
+    "dev": "tsup src/index.ts --watch",
+    "lint": "biome ci ./src",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "prepare": "panda codegen"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.33",
+    "tsconfig": "*",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@pandacss/dev": "^0.26.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "tsconfig/base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["dom", "ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    // "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "#acme/system/*": ["./styled-system/*"]
+    }
+  },
+  "include": ["styled-system", "stories"]
+}

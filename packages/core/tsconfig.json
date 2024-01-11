@@ -1,0 +1,12 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "include": ["src", "styled-system"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    // "moduleResolution": "Bundler",
+    "paths": {
+      "#acme/system/*": ["./styled-system/*"]
+    }
+  },
+  // "exclude": ["dist", "build", "node_modules"]
+}

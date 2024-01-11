@@ -1,0 +1,44 @@
+{
+  "name": "@acme/storybook",
+  "version": "0.3.3",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build --docs",
+    "preview-storybook": "serve storybook-static",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "panda codegen"
+  },
+  "imports": {
+    "#acme/system/*": "./styled-system/*"
+  },
+  "dependencies": {
+    "@acme/core": "*",
+    "@acme/react": "*",
+    "@pandacss/dev": "^0.26.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.5.3"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.33",
+    "@storybook/addon-a11y": "^7.5.3",
+    "@storybook/addon-actions": "^7.5.3",
+    "@storybook/addon-docs": "^7.5.3",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "1.0.8",
+    "@storybook/blocks": "7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "7.5.3",
+    "@storybook/testing-library": "0.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "serve": "^14.2.0",
+    "tsconfig": "*",
+    "typescript": "^5.1.6",
+    "vite": "^5.0.11"
+  }
+}
